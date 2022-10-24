@@ -245,7 +245,7 @@ class Game(object):
         while user_wallet < 100 or user_wallet > 1000: # Checks the money added to the wallet is between 100 and 1,000
             user_wallet = int(input("How much do you want to add to your wallet? Initial quantities must be between $100 and $1,000: "))
             
-        computer_wallet = 3000 #Keeps track if the computer is getting any profit or loosing money
+        computer_wallet = 0 #Keeps track if the computer is getting any profit or loosing money
         count = random.randint(0,4) #Gets a random number so the algorithm will be perform when this value is 0
         while(play):
             
