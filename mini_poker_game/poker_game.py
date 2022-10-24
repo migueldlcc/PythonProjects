@@ -192,7 +192,7 @@ class Game(object):
         comp_bet = 0
         if value_computer[1] < value_user[1]: # Computer score worse than user score, then fold
             computer_wallet = computer_wallet - bet #Computer always loses just the initial bet
-            user_wallet = user_wallet + bet
+            user_wallet = user_wallet + new_bet
             print("\nComputer folds, user wins")
             
         elif value_computer[1] > value_user[1]: # Computer score greater than user score
@@ -314,7 +314,7 @@ class Game(object):
                     
                 elif new_bet >= int(user_wallet * 0.5) and value_computer[1] < value_user[1]:
                     computer_wallet = computer_wallet - bet #Computer always loses just the initial bet
-                    user_wallet = user_wallet + bet
+                    user_wallet = user_wallet + new_bet
                     print("\nComputer's turn")
                     print("\nComputer folds, user wins") # Computer folds if the bet is 4 times the amount the user has already bet
                     play_again = int(input("\nDo you want to play again? press '1' for yes press '2' for no: "))
